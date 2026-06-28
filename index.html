@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eng. Tariq Zeyad">
+    <meta name="description" content="Professional To-Do Application - Front-End Development Project">
+    <title>TaskFlow | Eng. Tariq Zeyad</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Personal Branding -->
+    <header class="header">
+        <div class="header-container">
+            <div class="branding">
+                <div class="developer-info">
+                    <div class="avatar">
+                        <span  style="cursor: pointer;" >TY</span>
+                    </div>
+                    <div class="developer-details">
+                        <h1 class="developer-name"  style="cursor: pointer;">Eng. Tariq Zeyad</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="project-meta">
+      <img style="cursor: pointer;" src="https://alaqsa.edu.ps/site/MainPage/Resources/img/logo.png" 
+                         alt="Al-Aqsa University" 
+                         class="uni-logo">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">TaskFlow</h2>
+                    <p class="project-subtitle"> Task Management</p>
+                </div>
+          
+            </div>
+
+            <!-- To-Do Application -->
+            <div class="todo-app">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="input-wrapper">
+                        <i class="fas fa-plus-circle input-icon"></i>
+                        <input 
+                            type="text" 
+                            id="taskInput" 
+                            class="task-input" 
+                            placeholder="What needs to be done?"
+                            autocomplete="off"
+                            aria-label="Add new task"
+                        >
+                        <button class="add-btn" id="addBtn" aria-label="Add task">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Add Task</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters & Actions -->
+                <div class="controls-section">
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-list"></i> All
+                        </button>
+                        <button class="filter-btn" data-filter="active">
+                            <i class="fas fa-clock"></i> Active
+                        </button>
+                        <button class="filter-btn" data-filter="completed">
+                            <i class="fas fa-check-circle"></i> Completed
+                        </button>
+                    </div>
+                    <button class="clear-btn" id="clearCompletedBtn">
+                        <i class="fas fa-trash-alt"></i> Clear Completed
+                    </button>
+                </div>
+
+                <!-- Task List -->
+                <div class="task-container" id="taskContainer">
+                    <ul class="task-list" id="taskList"></ul>
+                    
+                    <!-- Empty State -->
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>No tasks yet</h3>
+                        <p>Add your first task above and stay productive!</p>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="stats-bar">
+                    <div class="stats-info">
+                        <span class="stat-item">
+                            <i class="fas fa-tasks"></i>
+                            <span id="totalCount">0</span> total
+                        </span>
+                        <span class="stat-item">
+                            <i class="fas fa-spinner"></i>
+                            <span id="activeCount">0</span> remaining
+                        </span>
+                        <span class="stat-item">
+                            <i class="fas fa-check-double"></i>
+                            <span id="completedCount">0</span> done
+                        </span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Fast & Responsive</h4>
+                    <p>Lightning-fast performance</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Mobile Ready</h4>
+                    <p>Fully responsive design</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-database"></i>
+                    <h4>Local Storage</h4>
+                    <p>Data persists locally</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-branding">
+                <span class="copyright">© 2026 Eng. Tariq Zeyad</span>
+                <span class="separator">|</span>
+                <span class="rights">All Rights Reserved</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Tariq-Zeyad/" class="footer-link" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/tariq-zeyad-a6025740b/" class="footer-link" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
